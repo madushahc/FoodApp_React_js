@@ -12,8 +12,9 @@ function App() {
   const [foodId, setFoodId]= useState("658615");
    return (
     <div className="App">
-      <Nav/>
+      <div><Nav />
       <Search foodData={foodData} setFoodData={setFoodData} />
+     
       <Container>
         <InnerContainer>
           <FoodDatatList foodData={foodData} setFoodId={setFoodId} />
@@ -22,6 +23,7 @@ function App() {
           <FoodDetail foodId={foodId}/>
         </InnerContainer>
       </Container >
+      </div>
  
     </div>
   )

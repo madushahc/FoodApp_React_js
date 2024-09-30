@@ -50,12 +50,15 @@ export default function FoodDetail({foodId}){
                 ${(food.pricePerServing/100).toFixed(2)}
                 </div>
                 </div>
+                <div>
+                    
+                </div>
             <div>
                 <h2>Ingredients</h2>
                 <ItemList food={food} isLoading={isLoading}/>
               
                 <h2>Instructions</h2><ol>
-                {isLoading? <p>Loading...</p>:(food.analyzedInstructions[0].steps.map((step)=> (<li key={step.step}>{step.step}</li>)))}
+                {isLoading? <p>Loading...</p>:(food.analyzedInstructions[0].steps.map((step)=> (<li className={styles.li} key={step.step}>{step.step}</li>)))}
 
                 </ol>
            
